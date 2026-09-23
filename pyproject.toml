@@ -1,0 +1,25 @@
+[project]
+name = "large-light-novels"
+version = "0.1.0"
+description = "RAG Pipeline for Context heavy light novels"
+readme = "README.md"
+authors = [
+    { name = "Muhammad Alfatih Arrazy", email = "34620257+marrazy@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "alembic>=1.20.0",
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "pgvector>=0.5.0",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.13.5",
+    "sqlalchemy>=2.0.54",
+]
+
+[project.scripts]
+large-light-novels = "large_light_novels:main"
+
+[build-system]
+requires = ["uv_build>=0.12.18,<0.13.0"]
+build-backend = "uv_build"
